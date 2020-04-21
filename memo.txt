@@ -1,0 +1,21 @@
+curl "https://www.zcool.com.cn/u/547463?myCate=0&sort=8&p=5"|grep "https://www.zcool.com.cn/work"|grep blank
+.....
+curl "https://www.zcool.com.cn/u/547463?myCate=0&sort=8&p=2"|grep "https://www.zcool.com.cn/work"|grep blank
+
+
+curl -k  https://www.zcool.com.cn/work/ZMjY1MDc3Ng==.html  |grep 2o.jpg|cut -b 72-143 >   71
+....
+curl -k  https://www.zcool.com.cn/work/ZNjE5ODk2.html    	|grep 2o.jpg|cut -b 72-143 >	  01
+
+
+
+sed = 71|sed 'N;s/\n/.jpg /' | sed 's/^/&wget -O 71-/g' >> bb.txt
+.....
+sed = 01 |sed 'N;s/\n/.jpg /' | sed 's/^/&wget -O 01-/g' >>bb.txt
+
+
+
+sed 's/-1.jpg/-01.jpg/g' bb.txt | sed 's/-2.jpg/-02.jpg/g' | sed 's/-3.jpg/-03.jpg/g' | sed 's/-4.jpg/-04.jpg/g' | sed 's/-5.jpg/-05.jpg/g' | sed 's/-6.jpg/-06.jpg/g'| sed 's/-7.jpg/-07.jpg/g' | sed 's/-8.jpg/-08.jpg/g'| sed 's/-9.jpg/-09.jpg/g' > cc.txt
+
+
+
